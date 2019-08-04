@@ -1,0 +1,9 @@
+
+.container{
+	background-color: #888888;
+	height: calc(100vh - 50px );
+}
+.flex{
+	display: flex;
+	justify-content: center;
+}

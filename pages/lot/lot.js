@@ -9,7 +9,7 @@ export default {
 				summary:"比赛规则额",
 				date:"2019.7.2 -- 2019.7.8",
 			},
-			
+			title: 'timeline'
 		};
 	},
 

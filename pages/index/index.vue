@@ -1,71 +1,40 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view class="page">
+		<view class="img-view" v-if="!showSwiper">
+			<image :src="imgUrls[0]"></image>
 		</view>
-		<view class="name">
-			sfd的萨达
+		<swiper v-if="showSwiper" indicator-dots="true">
+			<swiper-item v-for="(img,key) in imgUrls" :key="key">
+				<image :src="img" />
+			</swiper-item>
+		</swiper>
+		<view class="uni-padding-wrap uni-common-mt">
+			<view class="uni-title">
+				<view>在App端默认为标题栏透明，当用户向下滚动时，标题栏逐渐由透明转变为不透明；当用户再次向上滚动时，标题栏又从不透明变为透明状态。</view>
+				<view>在微信小程序端，导航栏始终为不透明样式。</view>
+			</view>
+			<!-- <view class="uni-title uni-common-mt">图片类型</view> -->
 		</view>
+	<!-- 	<view class="uni-list">
+			<radio-group @change="radioChange">
+				<label class="uni-list-cell uni-list-cell-pd" v-for="(item,index) in items" :key="index">
+					<view>{{item.name}}</view>
+					<view>
+						<radio :value="item.value" :checked="item.checked" />
+					</view>
+				</label>
+			</radio-group>
+		</view> -->
+		<view style="height: 40upx;"></view>
+		<view class="sign">
+			<uni-button data-v-747ad799="" class="" type="primary">登陆</uni-button>
+		</view>
+		<view style="height: 100upx;"></view>
 	</view>
 </template>
 
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-			console.log(this.$db.getName())
-			console.log(this.$db.KEY_USER_INFO)
-			uni.setStorageSync(this.$db.KEY_USER_INFO, 'hello');
-			
-			console.log(uni.getStorageSync(this.$db.KEY_USER_INFO))
-			
-			this.$db.login().then(res=> console.log(res))
-			.catch(res => {
-				console.log(res)				
-			})
-			console.log(this.getLike())
-		},
-		methods: {
-			getLike(){return 555}
-		}
-	}
-</script>
+<script src="./index.js"></script>
 
-<style lang="scss">
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+<style src="./index.css"></style>
 
-	.logo {
-		height: 200upx;
-		width: 200upx;
-		margin-top: 200upx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50upx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
-	}
-	
-	.name{
-		color:$uni-color-success;
-		font-size: $uni-font-size-sm
-	}
-</style>

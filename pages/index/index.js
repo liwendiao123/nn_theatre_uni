@@ -23,6 +23,10 @@ export default {
 	methods: {
 		radioChange(e) {
 			this.showSwiper = e.detail.value === "swiper";
+		},
+		
+		onLoad(){
+			this.$db.login()
 		}
 	}
 }

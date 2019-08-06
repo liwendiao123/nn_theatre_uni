@@ -7,7 +7,9 @@ class db{
 	
 	HOST = "https://www.51zfgx.com/dev/"
 	URL = this.HOST + "photo/"
-	API_LOGIN =  `${this.URL}system/set/user_info/`
+	// API_LOGIN =  `${this.URL}system/set/user_info/`
+	
+	API_LOGIN = "http://nnjc.lwdweb.top/User/Login"
 	
 	constructor(){}
 	
@@ -17,11 +19,13 @@ class db{
         return new Promise((resolve, reject) => {
             var data = options.data || {}
             // data['customer_uuid'] = wx.getStorageSync(API.UUID)
+			
             uni.request({
                 url: options.url,
                 method: options.method || "POST",
                 header: {
-                    'content-type': 'application/x-www-form-urlencoded' // 默认值
+                    'content-type': 'application/x-www-form-urlencoded' ,// 默认值
+					'Access-Control-Allow-Origin':true,
                 },
                 data: data,
                 success(res) {
@@ -54,7 +58,7 @@ class db{
     // 1 用户登录认证
     login() {
         return new Promise((resolve, reject) => {
-			this.baseURL( this.API_LOGIN, { code: "code"} )
+			this.baseURL( this.API_LOGIN, { UserName: "code",Password: "123"} )
 			.then(res => resolve( res ))
 			.catch(res => reject(res))
         })

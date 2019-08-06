@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="">
 		<view class="page">
 			<page-head :title="title"></page-head>
 			<view class="uni-product-list">

@@ -26,8 +26,11 @@
 			</radio-group>
 		</view> -->
 		<view style="height: 40upx;"></view>
-		<view class="sign">
-			<uni-button data-v-747ad799="" class="" type="primary">登陆</uni-button>
+		<view class="sign" v-if="isLogin">
+			<uni-button data-v-747ad799=""  class="" type="primary"  @tap="bindLogin">登陆</uni-button>
+		</view>
+		<view class="sign" v-else="">
+			<uni-button data-v-747ad799=""  class="" type="primary"  @tap="bindSign">注册</uni-button>
 		</view>
 		<view style="height: 100upx;"></view>
 	</view>

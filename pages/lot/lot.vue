@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="">
 		<page-head :title="title"></page-head>
 		<view class="">
 			<view class="uni-title uni-center">双栏时间轴</view>

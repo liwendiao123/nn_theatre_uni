@@ -1,34 +1,74 @@
 <template>
-	<view>
-		<view class="example-title">基本用法</view>
-		<uni-list>
-			<uni-list-item :show-arrow="false" title="标题文字" />
-			<uni-list-item title="标题文字" />
-			<uni-list-item :show-badge="true" :badge-text="12" title="标题文字" />
-			<uni-list-item :disabled="true" :show-badge="true" :badge-text="12" title="禁用状态" />
-		</uni-list>
-		<view class="example-title">包含描述信息</view>
-		<uni-list>
-			<uni-list-item :show-arrow="false" title="标题文字" note="描述信息" />
-			<uni-list-item title="标题文字" note="描述信息" />
-			<uni-list-item :show-badge="true" :badge-text="12" title="标题文字" note="描述信息" />
-		</uni-list>
-		<view class="example-title">显示缩略图</view>
-		<uni-list>
-			<uni-list-item title="标题文字" thumb="https://img-cdn-qiniu.dcloud.net.cn/new-page/hx.png" />
-			<uni-list-item title="标题文字" note="描述信息" thumb="https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png" />
-		</uni-list>
-		<view class="example-title">显示扩展图标</view>
-		<uni-list>
-			<uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="标题文字" />
-			<uni-list-item :show-extra-icon="true" :extra-icon="extraIcon2" title="标题文字" note="描述信息" />
-		</uni-list>
-		<view class="example-title">显示Switch</view>
-		<uni-list>
-			<uni-list-item :show-switch="true" :show-arrow="false" title="标题文字" @switchChange="switchChange" />
-			<uni-list-item :show-switch="true" :switch-checked="true" :show-arrow="false" title="标题文字" @switchChange="switchChange" />
-			<uni-list-item :disabled="true" :show-switch="true" :switch-checked="true" :show-arrow="false" title="禁用状态" @switchChange="switchChange" />
-		</uni-list>
+	<view class="content">
+		<page-head :title="title"></page-head>
+		<view class="uni-common-mt">
+			<view class="uni-form-item uni-column">
+				<view class="title">可自动聚焦的 input</view>
+				<input class="uni-input" focus placeholder="自动获得焦点" />
+			</view>
+			<!-- #ifdef APP-PLUS -->
+			<view v-if="platform==='ios'" class="uni-form-item uni-column">
+				<view class="title">隐藏 iOS 软键盘上的导航条</view>
+				<input class="uni-input" placeholder="触摸其他地方收起键盘" @focus="onFocus" @blur="onBlur" />
+			</view>
+			<!-- #endif -->
+			<view class="uni-form-item uni-column">
+				<view class="title">键盘右下角按钮显示为搜索</view>
+				<input class="uni-input" confirm-type="search" placeholder="键盘右下角按钮显示为搜索" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">控制最大输入长度的 input</view>
+				<input class="uni-input" maxlength="10" placeholder="最大输入长度为10" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">实时获取输入值：{{inputValue}}</view>
+				<input class="uni-input" @input="onKeyInput" placeholder="输入同步到view中" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">控制输入的 input</view>
+				<input class="uni-input" @input="replaceInput" v-model="changeValue" placeholder="连续的两个1会变成2" />
+			</view>
+			<!-- #ifndef MP-BAIDU -->
+			<view class="uni-form-item uni-column">
+				<view class="title">控制键盘的 input</view>
+				<input class="uni-input" ref="input1" @input="hideKeyboard" placeholder="输入123自动收起键盘" />
+			</view>
+			<!-- #endif -->
+			<view class="uni-form-item uni-column">
+				<view class="title">数字输入的 input</view>
+				<input class="uni-input" type="number" placeholder="这是一个数字输入框" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">密码输入的 input</view>
+				<input class="uni-input" password type="text" placeholder="这是一个密码输入框" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">带小数点的 input</view>
+				<input class="uni-input" type="digit" placeholder="带小数点的数字键盘" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">身份证输入的 input</view>
+				<input class="uni-input" type="idcard" placeholder="身份证输入键盘" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">控制占位符颜色的 input</view>
+				<input class="uni-input" placeholder-style="color:#F76260" placeholder="占位符字体是红色的" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">带清除按钮的输入框</view>
+				<view class="with-fun">
+					<input class="uni-input" placeholder="带清除按钮的输入框" :value="inputClearValue" @input="clearInput" />
+					<view class="uni-icon uni-icon-clear" v-if="showClearIcon" @click="clearIcon"></view>
+				</view>
+			</view>
+			<view class="uni-form-item uni-column">
+				<view class="title">可查看密码的输入框</view>
+				<view class="with-fun">
+					<input class="uni-input" placeholder="请输入密码" :password="showPassword" />
+					<view class="uni-icon uni-icon-eye" :class="[!showPassword ? 'uni-active' : '']" @click="changePassword"></view>
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 

@@ -1,6 +1,7 @@
 export default {
 	data() {
 		return {
+			isLogin:!false,
 			showSwiper: false,
 			imgUrls: [
 				"/static/shuijiao.jpg",
@@ -27,6 +28,18 @@ export default {
 		
 		onLoad(){
 			this.$db.login()
-		}
+		},
+		
+		bindLogin() {
+			uni.navigateTo({
+				url:  '/pages/login/login'
+			});
+		},
+		bindSign(){
+			
+			uni.navigateTo({
+				url:  '/pages/sign/sign'
+			});
+		},
 	}
 }

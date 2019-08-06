@@ -1,9 +1,10 @@
-
-.container{
-	background-color: #888888;
-	height: calc(100vh - 50px );
-}
-.flex{
-	display: flex;
-	justify-content: center;
-}
+	.title {
+		padding: 10upx 25upx;
+	}
+	.uni-icon-clear,
+	.uni-icon-eye {
+		color: #999;
+	}
+	page {
+		background-color: #eeeeee;
+	}

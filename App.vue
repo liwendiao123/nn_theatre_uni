@@ -26,7 +26,7 @@
 
 	/* 以下样式用于 hello uni-app 演示所需 */
 	page {
-		background-color: #F4F5F6;
+		/* background-color: #F4F5F6; */
 		height: 100%;
 		font-size: 28upx;
 		line-height: 1.8;
@@ -66,6 +66,7 @@
 	page {
 		min-height: 100%;
 		display: flex;
+		background-color: #ffffff;
 	}
 
 	/* #ifdef MP-BAIDU */
@@ -109,7 +110,7 @@
 		flex: 1;
 		flex-direction: column;
 		background-color: #efeff4;
-		padding: 20upx;
+		/* padding: 20upx; */
 	}
 
 	.input-group {

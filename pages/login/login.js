@@ -124,10 +124,17 @@
                     uni.navigateBack();
                 }
 
-            }
+            },
+			
+			bindReLogin(){
+				wx.redirectTo({
+					url:  '/pages/sign/sign'
+				})
+			},
         },
         onReady() {
             this.initPosition();
             this.initProvider();
-        }
+        },
+		
     }

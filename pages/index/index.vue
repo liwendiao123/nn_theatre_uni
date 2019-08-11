@@ -1,5 +1,6 @@
 <template>
 	<view class="page">
+		<view class="top-line"></view>
 		<view class="img-view" v-if="!showSwiper">
 			<image :src="imgUrls[0]"></image>
 		</view>

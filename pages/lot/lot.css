@@ -7,3 +7,19 @@
 	display: flex;
 	justify-content: center;
 }
+
+
+.agenda{
+	background-color: #ffffff;
+	padding: 17px 0 30px;
+	width: 750rpx;
+}
+.title{
+	font-size: 11pt;
+	font-weight: bolder;
+}
+.team{
+	font-size: 11pt;
+	color: #888;	
+	margin-bottom: 10px;;
+}

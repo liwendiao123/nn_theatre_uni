@@ -25,13 +25,15 @@ class db{
                 method: options.method || "POST",
                 header: {
                     'content-type': 'application/x-www-form-urlencoded' ,// 默认值
-					'Access-Control-Allow-Origin':true,
+					// 'Access-Control-Allow-Origin':true,
                 },
                 data: data,
                 success(res) {
+					// debugger
                     resolve(res)
                 },
                 fail(res) {
+					// debugger
                     console.log(res)
                     reject(res)
                 },

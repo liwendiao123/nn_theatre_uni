@@ -1,12 +1,16 @@
 <template>
 	<view class="content">
+		<view class="top-line"></view>
 		<view class="header">
 			<image src="../../static/kitty-PersonalCenter/shezhi.png" mode="" class="setting-btn"></image>
 			<view class="uni-flex uni-row" style="align-items: center;">
 				<view class="img-profile"><image :src="user.profile" mode=""></image></view>
 				<view>
 					<view class="nikename">
-						{{ user.nickname }}<view class="usertag">{{ user.level }}</view>
+						<view class="username">
+							{{ user.nickname }}
+						</view>
+						<view class="usertag">{{ user.level }}</view>
 					</view>
 					<view class="uni-flex uni-row">
 						<view class="usertag" v-for="tag in user.tags">{{ tag }}</view>
@@ -75,7 +79,7 @@
 						<view class="card-item-block-title">{{ item.title }}</view>
 						<view class="card-item-block-disc">{{ item.disc }}</view>
 					</view>
-					<button type="default" size="mini">去查看</button>
+					<button type="default" size="mini">{{ item.btn }}</button>
 				</view>
 			</view>
 		</view>
@@ -97,7 +101,8 @@
 	}
 	.header{
 		color: $uni-text-color-inverse;
-		background-image: linear-gradient( 40deg, rgb(210,166,95) 0%, rgb(239,201,142) 100%);
+		// background-image: linear-gradient( 40deg, rgb(210,166,95) 0%, rgb(239,201,142) 100%);
+		background-color: #ffffff;
 		padding: 50upx 30upx;
 		margin-bottom: $item-margin-bottom;
 		position: relative;
@@ -110,6 +115,10 @@
 				vertical-align: middle;
 				border: 2px solid $border-color;
 			}
+		}
+		.username{
+			color: #000;
+			display: inline-block;
 		}
 		.usertag{
 			padding: 0 20upx;

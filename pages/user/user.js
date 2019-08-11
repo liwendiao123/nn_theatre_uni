@@ -2,10 +2,11 @@ export default {
 		data() {
 			return {
 				user: {
-					profile: 'https://via.placeholder.com/70/ffffff/808080',
+					// profile: 'https://via.placeholder.com/70/ffffff/808080',
+					profile: '/static/logo/1.jpg',					
 					nickname: 'Kitty Wei',
-					level: '钻石',
-					tags: ['已实名', '查看信用']
+					level: '会员',
+					tags: ['已实名']
 				},
 				orderList: [
 					{icon: 'yinhangka', text: '待付款', padge: 0},
@@ -34,14 +35,19 @@ export default {
 				otherServices: [
 					{
 						icon: 'mic',
-						name: '小金库',
-						title: '你有一笔奖金，快来看看！你有一笔奖金，快来看看！',
-						disc: '参加早起打卡，瓜分5亿红包参加早起打卡，瓜分5亿红包',
+						// name: '小金库',
+						// title: '报名资料',
+						disc:"报名资料",
+						btn:"修改",
+						// disc: '参加早起打卡，瓜分5亿红包参加早起打卡，瓜分5亿红包',
 					},{
 						icon: 'hotel',
-						name: '基金',
-						title: '信托投资基金、公积金、保险基金',
-						disc: '为了某种目的而设立的具有一定数量的资金',
+						// name: '基金',
+						// title: '通知',
+						disc:"通知",
+						btn:"查看",
+						
+						// disc: '为了某种目的而设立的具有一定数量的资金',
 					}
 				],
 				productList: [],

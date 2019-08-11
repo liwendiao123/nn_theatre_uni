@@ -1,5 +1,6 @@
 <template>
     <view class="content">
+		<view class="top-line"></view>
         <view class="input-group">
             <view class="input-row border">
                 <text class="title">账号：</text>

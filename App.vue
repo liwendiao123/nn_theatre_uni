@@ -66,7 +66,8 @@
 	page {
 		min-height: 100%;
 		display: flex;
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
+		background-color: #f9f9f9;
 	}
 
 	/* #ifdef MP-BAIDU */
@@ -110,8 +111,24 @@
 		flex: 1;
 		flex-direction: column;
 		background-color: #efeff4;
-		/* padding: 20upx; */
 	}
+	.top-line{		
+		position: absolute;
+		z-index: 3;
+		right: 0;
+		top: 0;
+		
+		left: 0;
+		right: 0;
+		
+		height: 1px;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		-ms-transform: scaleY(.5);
+		transform: scaleY(.5);
+		background-color: #c8c7cc;
+	}
+
 
 	.input-group {
 		background-color: #ffffff;

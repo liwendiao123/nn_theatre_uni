@@ -40,6 +40,11 @@
 			"style": {
 				"navigationBarTitleText": "报名"
 			}
+		},{
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": "测试"
+			}
 		}
 	],
 	"globalStyle": {

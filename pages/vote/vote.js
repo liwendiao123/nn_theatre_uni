@@ -1,11 +1,21 @@
+
+
 export default {
+
     data() {
         return {
             title: 'product-list',
 			productList: [],
-            renderImage: false
+            renderImage: false,
+			
+			page: 1,
+			start: 0,
+			end: 0,
+			list: [], // 列表
+			loading: true
         };
     },
+	
     methods: {
         loadData(action = 'add') {
             const data = [
@@ -60,14 +70,25 @@ export default {
             data.forEach(item => {
                 this.productList.push(item);
             });
-        }
+        },
+		
+		// 选中
+		choose(item) {
+			// item 返回选中 JSON 对象
+			console.log(item)
+		},
+		
     },
     onLoad() {
         this.loadData();
         setTimeout(()=> {
             this.renderImage = true;
         }, 300);
+		
     },
+	
+	
+	
     onPullDownRefresh() {
         this.loadData('refresh');
         // 实际开发中通常是网络请求，加载完数据后就停止。这里仅做演示，加延迟为了体现出效果。
@@ -77,5 +98,6 @@ export default {
     },
     onReachBottom() {
         this.loadData();
+		
     }
 };

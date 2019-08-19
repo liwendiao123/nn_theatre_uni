@@ -16,6 +16,10 @@
 				</view>
 			</view>
 		</view>
+		<!-- <waterfall-flow :list="list" :loading="loading" @click="choose"></waterfall-flow> -->
+		
+		
+		
 	</view>
 </template>
 

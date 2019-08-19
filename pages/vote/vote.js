@@ -4,7 +4,7 @@ export default {
 
     data() {
         return {
-            title: 'product-list',
+            title: '优秀作品',
 			productList: [],
             renderImage: false,
 			

@@ -7,4 +7,20 @@
 	display: flex;
 	justify-content: center;
 }
+<<<<<<< HEAD
  */
+=======
+
+.uni-product-list{
+	justify-content: center;
+}
+.uni-product-title{	font-size: 11pt;}
+.uni-product-price-original{font-size: 9pt;}
+.uni-product{
+	padding: 3px;
+}
+.bg_white{
+	background-color: #FFFFFF;
+	padding: 7px;
+}
+>>>>>>> origin/master

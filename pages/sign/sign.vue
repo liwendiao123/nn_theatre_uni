@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<view class="top-line"></view>
 		<page-head :title="title"></page-head>
 		<view class="uni-common-mt">
 			<view class="uni-form-item uni-column">

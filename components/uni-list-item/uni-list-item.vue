@@ -107,11 +107,11 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	@charset "UTF-8";
 
 	.uni-list-item {
-		font-size: 32upx;
+		font-size: 9pt;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -128,7 +128,7 @@
 	}
 
 	.uni-list-item__container {
-		padding: 24upx 30upx;
+		/* padding: 24upx 30upx; */
 		width: 100%;
 		box-sizing: border-box;
 		flex: 1;
@@ -161,7 +161,8 @@
 
 	.uni-list-item__content-title {
 		/* font-size: 32upx; */
-		font-size:11pt;
+		font-size:9pt;
+		color: $uni-text-color-grey !important;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		color: inherit;
@@ -180,7 +181,7 @@
 	}
 
 	.uni-list-item__extra {
-		width: 70%;
+		/* width: 70%; */
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;

@@ -1,4 +1,4 @@
-image,
+/* image,
 swiper,
 .img-view {
 	width: 750upx;
@@ -10,4 +10,28 @@ swiper,
 
 .sign{
 	padding: 15px;
+}
+ */
+.container{
+	padding: 10px 15px;
+}
+
+.cover{
+	width: 100%;
+}
+.cover_image{
+	width: 100%;
+	border-radius: 5px;
+-moz-box-shadow:0px 7px 14px #737373; -webkit-box-shadow:0px 7px 14px #737373; box-shadow:0px 7px 14px #737373;
+	
+}
+
+.title{
+	font-size: 13pt;
+	font-weight: bold;
+	margin: 15px 0 5px;
+}
+.summary{
+	font-size: 9pt;
+	color: #999;
 }

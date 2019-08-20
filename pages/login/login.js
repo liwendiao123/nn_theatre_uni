@@ -20,6 +20,15 @@
         },
         computed: mapState(['forcedLogin']),
         methods: {
+			
+			onClick(e){
+				console.log('onclick')
+				uni.navigateTo({
+					url:"/pages/sign/sign"
+				})
+			},
+			
+			
             ...mapMutations(['login']),
             initProvider() {
                 const filters = ['weixin', 'qq', 'sinaweibo'];

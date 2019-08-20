@@ -17,7 +17,8 @@
 		},
 		methods: {
 			click(){
-				console.log("click")
+				// console.log("click")
+				this.$emit('onClick',{msg:'页面更新'})
 			}
 		}
 	}

@@ -34,20 +34,24 @@ export default {
 				],
 				otherServices: [
 					{
-						icon: 'mic',
+						icon: 'menu-fix',
 						// name: '小金库',
 						// title: '报名资料',
 						disc:"报名资料",
 						btn:"修改",
 						// disc: '参加早起打卡，瓜分5亿红包参加早起打卡，瓜分5亿红包',
 					},{
-						icon: 'hotel',
+						icon: 'menu-info',
 						// name: '基金',
 						// title: '通知',
 						disc:"通知",
-						btn:"查看",
-						
-						// disc: '为了某种目的而设立的具有一定数量的资金',
+						btn:"查看",				
+					},{
+						icon: 'menu-share',
+						// name: '基金',
+						// title: '通知',
+						disc:"分享",
+						btn:"海报",				
 					}
 				],
 				productList: [],

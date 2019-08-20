@@ -3,7 +3,7 @@
 		 <!-- <uni-icon type="success" size="50" color="#03b753" ></uni-icon> -->
 		<view class="title">提交资料成功</view>
 		<view class="summay">您已经提交资料成功，请等待集团审核，点击我的即可查看最新结果</view>
-		<button type="primary" class="btn">返回首页</button>
+		<button type="primary" class="btn" @click="backToIndex">返回首页</button>
 	</view>
 </template>
 
@@ -17,8 +17,11 @@
 			}
 		},
 		methods: {
-			click(){
+			backToIndex(){
 				console.log("click")
+				uni.switchTab({
+					url:"/pages/index/index"
+				})
 			}
 		}
 	}

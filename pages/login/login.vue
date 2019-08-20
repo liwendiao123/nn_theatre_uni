@@ -6,7 +6,7 @@
 		<view class="component ">
 			<login></login>
 		</view>
-		<btn-next></btn-next>
+		<btn-next @onClick="onClick"></btn-next>
     </view>
 	
 </template>

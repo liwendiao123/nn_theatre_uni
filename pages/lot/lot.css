@@ -1,13 +1,4 @@
 
-.container{
-	background-color: #888888;
-	height: calc(100vh - 50px );
-}
-.flex{
-	display: flex;
-	justify-content: center;
-}
-
 
 .agenda{
 	background-color: #ffffff;
@@ -17,9 +8,16 @@
 .title{
 	font-size: 11pt;
 	font-weight: bolder;
+	margin: 20px;
+	text-align: center;
 }
 .team{
 	font-size: 11pt;
 	color: #888;	
 	margin-bottom: 10px;;
+}
+.footer{
+	text-align: center;
+	color: #999;
+	font-size: 9pt;
 }

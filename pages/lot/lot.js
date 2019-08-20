@@ -9,7 +9,7 @@ export default {
 				summary:"比赛规则额",
 				date:"2019.7.2 -- 2019.7.8",
 			},
-			title: 'timeline',
+			title: '2018年3月20日国际舞蹈大赛安排表',
 			
 			agenda:[
 				{ id : 1, date:"9:45",title:"海之歌" , team:"南宁大沙田团队"},

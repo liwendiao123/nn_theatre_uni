@@ -20,12 +20,18 @@ import login from '@/components/2_login/2_login.vue' //登陆
 import btnNext from '@/components/3_btn_next/3_btn_next.vue' //下一步按钮
 import signForm from '@/components/4_sign_form/4_sign_form.vue' //下一步按钮
 import signCussess from '@/components/5_sign_success/5_sign_success.vue' //下一步按钮
+import timeLine from '@/components/6_time_line/6_time_line.vue' //下一步按钮
+import voteLine from '@/components/7_vote_line/7_vote_line' //下一步按钮
+
+
 
 Vue.component('news-item', newsItem)
 Vue.component('login', login)
 Vue.component('btn-next', btnNext)
 Vue.component('sign-form', signForm)
 Vue.component('sign-success', signCussess)
+Vue.component('time-line', timeLine)
+Vue.component('vote-line', voteLine)
 
 
 Vue.config.productionTip = false
@@ -43,3 +49,8 @@ const app = new Vue({
     ...App
 })
 app.$mount()
+
+
+
+// "navigationBarBackgroundColor":"#ffffff",
+// "navigationBarTextStyle": "black",

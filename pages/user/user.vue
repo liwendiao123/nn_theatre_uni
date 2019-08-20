@@ -71,7 +71,7 @@
 				<view class="card-item-block uni-flex uni-row" v-for="( item, index ) in otherServices" :key="index">
 					<view>
 						<view>
-							<image :src="'../../static/kitty-PersonalCenter/' + item.icon +'.png'" mode="" style="width: 80upx;height: 80upx;vertical-align: top;"></image>
+							<image :src="'../../static/' + item.icon +'.png'" mode="" style="width: 32px;height: 32px;vertical-align: top;"></image>
 						</view>
 						<view>{{ item.name }}</view>
 					</view>
@@ -113,7 +113,8 @@
 				height: 140upx;
 				border-radius: 50%;
 				vertical-align: middle;
-				border: 2px solid $border-color;
+				// border: 2px solid $sys-color-reverse;
+				
 			}
 		}
 		.username{
